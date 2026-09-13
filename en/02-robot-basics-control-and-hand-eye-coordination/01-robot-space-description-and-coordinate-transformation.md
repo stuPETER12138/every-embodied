@@ -12,7 +12,7 @@ In robotics, describing an object's position and pose in space is the foundation
 
 ##### 2.1 Rotation Matrix
 
-Rotation in two-dimensional or three-dimensional space can be described by an orthogonal matrix. Taking rotating $\theta$ by $Z$ as an example, the rotation matrix $R_z(\theta)$ is:
+Rotation in two-dimensional or three-dimensional space can be described by an orthogonal matrix. Taking rotation of $\theta$ degrees around the $Z$ axis as an example, the rotation matrix $R_z(\theta)$ is:
 
 $$R_z(\theta) = \begin{bmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 

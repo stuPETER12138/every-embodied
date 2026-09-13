@@ -6,16 +6,16 @@ Review machine-translated technical claims before relying on them.
 -->
 #### 1. Introduction
 
-Forward Kinematics solves the problem of determining the pose of an end effector when all joint angles are known. The Denavit-Hartenberg (DH) parameter method is the standard approach for establishing linkage coordinate systems.
+Forward Kinematics solves the problem of determining the pose of an end effector based on all joint angles. The Denavit-Hartenberg (DH) parameter method is the standard approach for establishing linkage coordinates.
 
 #### 2. Detailed Explanation of DH Parameters (Standard Type)
 
 Describe the relationship between the two adjacent links $i-1$ and $i$, requiring only 4 parameters:
 
-| **Parameter** | **Symbol** | **Physical Meaning** | **Measurement Reference**      |
-| ------------ | ---------- | ------------------------------------------------- | ----------------- |
-| **Link Length** | $a_i$ | The distance along the $x_i$ axis, from $z_{i-1}$ to $z_i$ | Structure of the link itself |
-| **Link Torsion Angle** | $\alpha_i$ | The angle rotated around the $x_i$ axis, from $z_{i-1}$ to $z_i$ | Structure of the link itself |
+| **Parameter** | **Symbol** | **Physical Meaning** | **Measurement Reference** |
+| ------------ | ---------- | --------------------- | ----------------------- |
+| **Link Length** | $a_i$ | The distance along the $x_i$ axis, from $z_{i-1}$ to $z_i$ | Link structure itself      |
+| **Link Torsion Angle** | $\alpha_i$ | The angle rotated around the $x_i$ axis, from $z_{i-1}$ to $z_i$ | Link structure itself      |
 | **Joint Offset** | $d_i$ | The distance along the $z_{i-1}$ axis, from $x_{i-1}$ to $x_i$ | Joint variable (translational joint) |
 | **Joint Angle** | $\theta_i$ | The angle rotated around the $z_{i-1}$ axis, from $x_{i-1}$ to $x_i$ | Joint variable (rotational joint) |
 

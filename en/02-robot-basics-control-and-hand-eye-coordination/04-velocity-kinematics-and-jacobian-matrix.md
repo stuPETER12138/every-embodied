@@ -10,20 +10,20 @@ In the previous documents, we learned about **position** (kinematics) and **forc
 
 **Jacobian Matrix ($J$)** is called a "bridge" because it connects these two fields at the differential level:
 
-1. **Connecting the joint space and the Cartesian space**: It describes how the joint velocity $\dot{q}$ is mapped to the linear and angular velocities of the end effector $v, \omega$.
+1. **Connecting the joint space and Cartesian space**: It describes how the joint velocity $\dot{q}$ is mapped to the linear and angular velocities of the end effector $v, \omega$.
 
    $$v = J(q) \dot{q}$$
 
 2. **Linking motion and force (virtual work principle)**: This is the entry point to dynamics. It describes how the generalized force at the end point is converted into the torque required by the joint ($\tau$).
 
-    For the 2R robotic arm, if a full pose velocity $[\dot{x}, \dot{y}, \dot{\phi}]^T$ is used, the end generalized force should be written as
-    $F=[f_x, f_y, m_z]^T$ (two-dimensional force + end torque).
+    For the 2R robotic arm, if the full pose velocity $[\dot{x}, \dot{y}, \dot{\phi}]^T$ is used, the end generalized force should be written as
+    $F=[f_x, f_y, m_z]^T$ (2D force + end torque).
 
    $$\tau = J^T(q) F$$
 
-Without a Jacobian matrix, we cannot reverse-engineer the joint rotation speed based on the desired velocity at the end, nor can we calculate the required torque for the joint motor based on the load grasped by the end.
+Without a Jacobian matrix, we cannot infer the joint speed from the desired end velocity, nor can we calculate the torque required for the joint motor based on the load grasped by the end.
 
-#### 2. Core Definitions
+#### 2. Core Definition
 
 For a robot with $n$ degrees of freedom, the joint variable is $q = [q_1, \dots, q_n]^T$. The end pose (position and pose) can be written as $x = f(q)$.
 
